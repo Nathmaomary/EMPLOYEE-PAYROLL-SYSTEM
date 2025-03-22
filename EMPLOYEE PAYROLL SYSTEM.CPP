@@ -1,6 +1,9 @@
+// main.cpp
 #include <iostream>
+using namespace std;
 
 int main() {
-    std::cout << "Employee Payroll System" << std::endl;
+    cout << "Employee Payroll System" << endl;
     return 0;
 }
+
