@@ -71,6 +71,33 @@ void Payroll::displayPayroll(Employee employee, float salary) {
     cout << "Payroll Details for Employee " << employee.getName() << endl;
     cout << "Salary: " << salary << endl;
 }
+// main.cpp (Update)
+#include <iostream>
+#include "Employee.h"
+#include "Payroll.h"
+
+using namespace std;
+
+int main() {
+    string name;
+    int id;
+    float basicSalary;
+    
+    cout << "Enter employee ID: ";
+    cin >> id;
+    cout << "Enter employee name: ";
+    cin >> name;
+    cout << "Enter employee basic salary: ";
+    cin >> basicSalary;
+    
+    Employee emp(id, name, basicSalary);
+    Payroll payroll;
+    float salary = payroll.calculateSalary(emp);
+    payroll.displayPayroll(emp, salary);
+    
+    return 0;
+}
+
 
 
 
