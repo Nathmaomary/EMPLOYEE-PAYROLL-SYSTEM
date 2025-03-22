@@ -205,6 +205,13 @@ void generateSalaryReport(vector<Employee>& employees) {
         cout << emp.getName() << " - Salary: " << salary << endl;
     }
 }
+// main.cpp (Update)
+try {
+    // Try to execute payroll calculation or input
+} catch (const std::exception& e) {
+    cerr << "Error: " << e.what() << endl;
+}
+
 
 
 
