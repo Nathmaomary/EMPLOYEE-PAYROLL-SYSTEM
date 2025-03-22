@@ -64,7 +64,14 @@ float Payroll::calculateSalary(Employee employee) {
     float basicSalary = employee.getBasicSalary();
     // Implement salary calculation logic (e.g., adding bonuses, deductions)
     return basicSalary;
+}// Payroll.cpp (Update)
+#include <iostream>
+
+void Payroll::displayPayroll(Employee employee, float salary) {
+    cout << "Payroll Details for Employee " << employee.getName() << endl;
+    cout << "Salary: " << salary << endl;
 }
+
 
 
 
