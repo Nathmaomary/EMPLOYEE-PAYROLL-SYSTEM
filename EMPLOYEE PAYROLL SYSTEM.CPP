@@ -176,6 +176,11 @@ float Payroll::calculateSalary(Employee employee) {
     float tax = basicSalary * 0.05;
     return basicSalary + bonus - tax;
 }
+// Employee.cpp (Update)
+void Employee::displayEmployeeType() {
+    cout << "Employee Type: " << (type == EmployeeType::FULL_TIME ? "Full-Time" : "Part-Time") << endl;
+}
+
 
 
 
