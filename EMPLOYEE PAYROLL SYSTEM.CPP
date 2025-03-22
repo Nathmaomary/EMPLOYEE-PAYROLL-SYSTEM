@@ -166,6 +166,10 @@ while (!(cin >> basicSalary) || basicSalary <= 0) {
     cin.clear();
     cin.ignore(numeric_limits<streamsize>::max(), '\n');
 }
+// Employee.h (Update)
+enum class EmployeeType { FULL_TIME, PART_TIME };
+EmployeeType type;
+
 
 
 
