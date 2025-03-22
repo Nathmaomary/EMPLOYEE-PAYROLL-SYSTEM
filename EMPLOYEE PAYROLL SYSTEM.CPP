@@ -159,6 +159,14 @@ void savePayrollToFile(Employee employee, float salary) {
     outFile << "ID: " << employee.getId() << ", Name: " << employee.getName() << ", Salary: " << salary << endl;
     outFile.close();
 }
+// main.cpp (Update)
+cout << "Enter employee basic salary: ";
+while (!(cin >> basicSalary) || basicSalary <= 0) {
+    cout << "Invalid input! Enter a positive salary: ";
+    cin.clear();
+    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+}
+
 
 
 
