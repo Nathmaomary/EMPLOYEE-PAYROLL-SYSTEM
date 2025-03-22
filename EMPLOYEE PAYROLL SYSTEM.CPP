@@ -110,7 +110,16 @@ float Payroll::calculateSalary(Employee employee) {
     float tax = basicSalary * 0.05; // 5% tax deduction
     return basicSalary + bonus - tax;
 }
-
+void displayPayrollBreakdown(Employee employee, 
+    float salary, float bonus, float tax);
+// Payroll.cpp (Update)
+void Payroll::displayPayrollBreakdown(Employee employee, float salary, float bonus, float tax) {
+    cout << "Employee: " << employee.getName() << endl;
+    cout << "Basic Salary: " << employee.getBasicSalary() << endl;
+    cout << "Bonus: " << bonus << endl;
+    cout << "Tax Deduction: " << tax << endl;
+    cout << "Total Salary: " << salary << endl;
+}
 
 
 
