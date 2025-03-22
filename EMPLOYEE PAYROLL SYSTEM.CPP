@@ -180,6 +180,16 @@ float Payroll::calculateSalary(Employee employee) {
 void Employee::displayEmployeeType() {
     cout << "Employee Type: " << (type == EmployeeType::FULL_TIME ? "Full-Time" : "Part-Time") << endl;
 }
+// main.cpp (Update)
+Employee* findEmployeeById(vector<Employee>& employees, int id) {
+    for (Employee& emp : employees) {
+        if (emp.getId() == id) {
+            return &emp;
+        }
+    }
+    return nullptr;
+}
+
 
 
 
