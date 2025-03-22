@@ -103,6 +103,14 @@ float Payroll::calculateSalary(Employee employee) {
     float bonus = basicSalary * 0.10; // 10% bonus
     return basicSalary + bonus;
 }
+// Payroll.cpp (Update)
+float Payroll::calculateSalary(Employee employee) {
+    float basicSalary = employee.getBasicSalary();
+    float bonus = basicSalary * 0.10; // 10% bonus
+    float tax = basicSalary * 0.05; // 5% tax deduction
+    return basicSalary + bonus - tax;
+}
+
 
 
 
