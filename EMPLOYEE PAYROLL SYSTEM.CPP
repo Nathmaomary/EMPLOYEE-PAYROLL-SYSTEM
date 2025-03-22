@@ -151,6 +151,15 @@ int main() {
     
     return 0;
 }
+// main.cpp (Update)
+#include <fstream>
+
+void savePayrollToFile(Employee employee, float salary) {
+    ofstream outFile("payroll.txt", ios::app);
+    outFile << "ID: " << employee.getId() << ", Name: " << employee.getName() << ", Salary: " << salary << endl;
+    outFile.close();
+}
+
 
 
 
