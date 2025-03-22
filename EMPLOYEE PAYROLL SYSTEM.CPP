@@ -197,6 +197,14 @@ if (!outFile) {
 }
 // main.cpp (Update)
 cout << "Menu: \n1. Add Employee\n2. Calculate Payroll\n3. Exit\n";
+// main.cpp (Update)
+void generateSalaryReport(vector<Employee>& employees) {
+    for (Employee& emp : employees) {
+        Payroll payroll;
+        float salary = payroll.calculateSalary(emp);
+        cout << emp.getName() << " - Salary: " << salary << endl;
+    }
+}
 
 
 
