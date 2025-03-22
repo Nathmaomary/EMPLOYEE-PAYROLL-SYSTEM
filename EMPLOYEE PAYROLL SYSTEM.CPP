@@ -169,6 +169,14 @@ while (!(cin >> basicSalary) || basicSalary <= 0) {
 // Employee.h (Update)
 enum class EmployeeType { FULL_TIME, PART_TIME };
 EmployeeType type;
+// Payroll.cpp (Update)
+float Payroll::calculateSalary(Employee employee) {
+    float basicSalary = employee.getBasicSalary();
+    float bonus = (employee.getType() == EmployeeType::FULL_TIME) ? basicSalary * 0.10 : basicSalary * 0.05;
+    float tax = basicSalary * 0.05;
+    return basicSalary + bonus - tax;
+}
+
 
 
 
