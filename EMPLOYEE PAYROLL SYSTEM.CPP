@@ -195,6 +195,9 @@ if (!outFile) {
     cerr << "Error opening file!" << endl;
     return 1;
 }
+// main.cpp (Update)
+cout << "Menu: \n1. Add Employee\n2. Calculate Payroll\n3. Exit\n";
+
 
 
 
