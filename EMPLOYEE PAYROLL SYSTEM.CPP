@@ -189,6 +189,13 @@ Employee* findEmployeeById(vector<Employee>& employees, int id) {
     }
     return nullptr;
 }
+// main.cpp (Update)
+ofstream outFile("payroll.txt", ios::app);
+if (!outFile) {
+    cerr << "Error opening file!" << endl;
+    return 1;
+}
+
 
 
 
