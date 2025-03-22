@@ -97,6 +97,13 @@ int main() {
     
     return 0;
 }
+// Payroll.cpp (Update)
+float Payroll::calculateSalary(Employee employee) {
+    float basicSalary = employee.getBasicSalary();
+    float bonus = basicSalary * 0.10; // 10% bonus
+    return basicSalary + bonus;
+}
+
 
 
 
