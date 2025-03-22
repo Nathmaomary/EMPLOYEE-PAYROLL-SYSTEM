@@ -120,6 +120,38 @@ void Payroll::displayPayrollBreakdown(Employee employee, float salary, float bon
     cout << "Tax Deduction: " << tax << endl;
     cout << "Total Salary: " << salary << endl;
 }
+// main.cpp (Update)
+#include <vector>
+
+int main() {
+    vector<Employee> employees;
+    
+    // Collect multiple employee data
+    for (int i = 0; i < 2; ++i) { // For example, 2 employees
+        string name;
+        int id;
+        float basicSalary;
+        
+        cout << "Enter employee ID: ";
+        cin >> id;
+        cout << "Enter employee name: ";
+        cin >> name;
+        cout << "Enter employee basic salary: ";
+        cin >> basicSalary;
+        
+        employees.push_back(Employee(id, name, basicSalary));
+    }
+    
+    // Process payroll for each employee
+    Payroll payroll;
+    for (Employee emp : employees) {
+        float salary = payroll.calculateSalary(emp);
+        payroll.displayPayrollBreakdown(emp, salary, salary * 0.10, salary * 0.05);
+    }
+    
+    return 0;
+}
+
 
 
 
